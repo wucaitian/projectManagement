@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UserList</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <table>
+        {% for key,value in user_dict.items() %}
+        <tr>
+            <td>{{key}}</td>
+            <td>{{value.name}}</td>
+            <td>{{value['age']}}</td>
+            <td>{{value.get('text')}}</td>
+            <td><a href="/detail/{{key}}">VeiwDetail</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
